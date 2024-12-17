@@ -72,13 +72,13 @@
         padding: 20px;
       }
 
-      .nav2 ul{
+      .nav2 ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
       }
 
-      .nav2 li{
+      .nav2 li {
         margin-bottom: 10px;
       }
       .nav2 a {
@@ -89,7 +89,7 @@
         width: 100%;
       }
 
-      .nav2 a:hover{
+      .nav2 a:hover {
         background-color: #137e0a;
       }
 
@@ -100,13 +100,55 @@
         width: 100%;
         padding: 8px;
         cursor: progress;
+      }
 
+      .nav3 {
+        background-color: #45a2bb;
+        padding: 10px;
+      }
+
+      .nav3 ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .nav3 a {
+        text-decoration: none;
+        color: #e7e3e3;
+        padding: 10px;
+        display: block;
+      }
+
+      .nav3 .dropdown-content{
+        display:none ;
+      }
+
+      .nav3 .dropdown:hover .dropdown-content{
+        display: block;
+        position: absolute;
+        background-color:#3e3e3e;
+        min-width: 100px;
+      }
+
+      .nav3 .login-btn {
+        border: none;
+        border-radius: 5px;
+        padding: 4px;
+      }
+
+      .nav3 .login-btn:hover {
+        color: #fff;
+        background-color: #000;
       }
     </style>
   </head>
   <body>
     <!-- variation - 01 -->
-    <div class="nav-container">       
+    <div class="nav-container">
       <h2>Variation 1: Horizontal with underline effect</h2>
       <nav class="nav1">
         <ul>
@@ -129,19 +171,23 @@
         <button class="login-btn">Login</button>
       </nav>
     </div>
+
+    <!-- variation - 03 -->
     <div class="nav-container">
       <h2>Variation 3: Horizontal with dropdown</h2>
       <nav class="nav3">
         <ul>
-          <a href=""><li>Home</li></a>
-          <a href=""><li>About</li></a>
-          <a href="">Our Story</a>
-          <a href="">Team</a>
-          <a href="">Contact</a>
-          <a href=""><li>Products</li></a>
-          <a href=""
-            ><li><button type="submit">Login</button></li></a
-          >
+          <li><a href="">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
         </ul>
       </nav>
     </div>
