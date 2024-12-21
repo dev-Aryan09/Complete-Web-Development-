@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox practice</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+      .container {
+        height: 600px;
+        width: 700px;
+        border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* by default flex direction is row */
+        /* flex-direction: column;      */
+
+      }
+
+      .items {
+        height: 85px;
+        width: 90px;
+        border: 2px solid black;
+        text-align: center;
+        margin-left: 1px;
+      }
+
+      /* some properties are directly injectd in elements */
+    </style>
+  </head>
+  <body>
+    <h2>Flexbox</h2>
+    <div class="container">
+      <div style="background-color: violet; align-self: flex-start;" class="items">V</div>
+      <div style="background-color: indigo; flex-grow: 1;" class="items">I</div>
+      <div style="background-color: blue; align-self: flex-end;" class="items">B</div>
+      <div style="background-color: green;" class="items">G</div>
+      <div style="background-color: yellow; align-self: flex-end;" class="items">Y</div>
+      <div style="background-color: orange; flex-shrink: 2;" class="items">O</div>
+      <div style="background-color: red; align-self: flex-start;" class="items">R</div>
+    </div>
+  </body>
+</html>
+  
