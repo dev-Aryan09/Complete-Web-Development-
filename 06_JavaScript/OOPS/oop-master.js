@@ -66,7 +66,87 @@ class Car extends Vehicle {
   }
 }
 
-let myNewCar = new Car("Toyota", "Corolla")
+let myNewCar = new Car("Toyota", "Corolla");
 // console.log(myNewCar.start());
 // console.log(myNewCar.drive());
 
+// -----------Encapsulation-=--------------
+
+class BankAccount {
+  #balance = 0;
+
+  deposit(amount) {
+    this.#balance += amount;
+    return this.#balance;
+  }
+
+  getBalance() {
+    return `${this.#balance}`;
+  }
+}
+
+let account = new BankAccount();
+// console.log(account.getBalance());
+
+// ------------------------ Abstraction -----------------
+
+class CoffeMachine {
+  start() {
+    //DB calls
+    // filter values
+    return `Starting the machine....`;
+  }
+
+  brewCoffee() {
+    //complex calculation
+    return `Brewing the coffee`;
+  }
+
+  pressStartButton() {
+    let msg1 = this.start();
+    let msg2 = this.brewCoffee();
+    return `${msg1} + ${msg2}`
+    
+  }
+}
+
+let myMachine = new CoffeMachine();
+
+// console.log(myMachine.start());
+// console.log(myMachine.brewCoffee());
+// console.log(myMachine.pressStartButton());
+
+
+// ------------------ polymorphism --------------------
+
+class Bird{
+  fly(){
+    return `Flying....`
+  }
+}
+
+class Penguin extends Bird{
+  fly(){
+    return `Penguin can't fly`
+  }
+}
+
+let bird = new Bird()
+let penguin = new Penguin()
+
+// console.log(bird.fly());
+// console.log(penguin.fly());
+
+//static method
+
+class Calculator{
+
+  static add(a,b){
+    return a+b
+  }
+}
+
+// let miniCalc = new Calculator()
+// console.log(miniCalc.add(2,3));
+
+console.log(Calculator.add(2,3));
