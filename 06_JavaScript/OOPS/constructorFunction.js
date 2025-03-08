@@ -11,6 +11,7 @@ let myNewCar = new Car("Tata", "Safari");
 
 function Tea(type) {
   this.type = type;
+
   this.describe = function () {
     return `this is a cup of ${this.type}`;
   };
@@ -24,6 +25,7 @@ function Animal(species) {
   this.species = species;
 }
 
+// How to add a function in a existing class
 Animal.prototype.sound = function () {
   return `${this.species} makes a sound`;
 };
@@ -34,7 +36,7 @@ let dog = new Animal("Dog");
 
 let cat = new Animal("Cat");
 // console.log(cat);
-// console.log(cat.sound());\
+// console.log(cat.sound());
 
 
 // error

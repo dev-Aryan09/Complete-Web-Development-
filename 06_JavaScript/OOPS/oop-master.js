@@ -81,7 +81,7 @@ class BankAccount {
   }
 
   getBalance() {
-    return `${this.#balance}`;
+    return `$ ${this.#balance}`;
   }
 }
 
@@ -111,7 +111,6 @@ class CoffeMachine {
 }
 
 let myMachine = new CoffeMachine();
-
 // console.log(myMachine.start());
 // console.log(myMachine.brewCoffee());
 // console.log(myMachine.pressStartButton());
@@ -137,7 +136,7 @@ let penguin = new Penguin()
 // console.log(bird.fly());
 // console.log(penguin.fly());
 
-//static method
+//-------- static method --------
 
 class Calculator{
 
@@ -149,4 +148,28 @@ class Calculator{
 // let miniCalc = new Calculator()
 // console.log(miniCalc.add(2,3));
 
-console.log(Calculator.add(2,3));
+// console.log(Calculator.add(2,3));
+
+
+// -------- getters and setters --------
+
+class Employee{
+  constructor(name, salary){
+    this.name = name
+    this._salary = salary    // underscore indicates there is a special meaning which is about to come
+  }
+
+  get salary(){
+    this._salary = this.salary
+  }
+
+  set salary(value){
+
+  }
+
+}
+
+let emp = new Employee("Aryan", 50000)
+// console.log(emp);
+console.log(emp._salary);
+

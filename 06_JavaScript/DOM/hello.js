@@ -1,8 +1,8 @@
 // example 1
 
-console.log(window);
-console.log(window.document);
-console.log(document);
+// console.log(window);
+// console.log(window.document);
+// console.log(document);
 
 let anc = document.querySelector("a");
 // anc.addEventListener("click", function () {
@@ -54,5 +54,40 @@ document
     taskList.lastElementChild.replaceWith(para);
   });
 
-
 // Example-6: Event Handling in the DOM -->
+
+document.getElementById("clickMeButton").addEventListener('mouseover', function(){
+// alert('yeah! you have to click this')
+})
+
+// Example-7: Event Delegation -->
+
+document.getElementById("teaList").addEventListener("click", function(event){
+  if(event.target && event.target.matches(".teaItem")){
+    alert("You selected: " + event.target.textContent)
+  }
+})
+
+// Example-8: Form Handling -->
+
+document.getElementById("feedbackForm").addEventListener('submit', function(event){
+  event.preventDefault();
+  let feedback = document.getElementById("feedbackInput").value;
+  console.log(feedback)
+
+  document.getElementById('feedbackDisplay').textContent = `Feedback is ${feedback}`
+})
+
+// Example-9: DOM Content Loadefd -->
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('domStatus').textContent = `DOM Content Loaded`
+})
+
+// Example-10: CSS Classes Manipulation -->
+
+document.getElementById('toggleHighlight').addEventListener('click', function(){
+  let description = document.getElementById("descriptionText");
+  description.classList.toggle('highlight')
+})
+
