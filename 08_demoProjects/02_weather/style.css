@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(190deg, #bcd3d4, #9faac3);
+}
+
+.container{
+    height: 250px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid  rgb(164, 211, 230);
+    border-radius: 10px 20px;
+    background-color: rgb(164, 211, 230);
+}
+
+.hidden{
+    display: none;
+}
+
+button:hover{
+    background-color: #3700B3;
+    color: white;
+}
